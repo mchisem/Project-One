@@ -1,14 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+
+h2 {
+    font-size: 30px;
+}
+
 /*title*/
 h1 {
     text-align: center;
     background-color: cadetblue !important;
     margin-top: 0;
+    margin-bottom: 50px;
 }
 
-/*search container*/
+#search,
+#weather {
+    margin-top: 5px;
+}
+
+/*containers*/
+/*#search,
+#weather,
+#map,
+#activities {
+    background-color: white;
+}*/
+
 #search {
     float: left;
-    padding: 10px;
+    padding: 15px;
     border: 2px solid black;
     width: 400px;
 }
@@ -18,14 +40,12 @@ h1 {
     float: right;
 }
 
-#map {
+#map,
+#activities {
     border: 2px solid black;
     clear: both;
+    width: auto;
 }
 
-#activities  {
-    border: 2px solid black;
-    clear: both;
-    
-}
+
 
