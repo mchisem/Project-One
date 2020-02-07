@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-
 h2 {
     font-size: 30px;
 }
@@ -21,18 +20,21 @@ h1 {
 }
 
 /*containers*/
-/*#search,
-#weather,
-#map,
-#activities {
-    background-color: white;
-}*/
-
 #search {
     float: left;
     padding: 15px;
     border: 2px solid black;
     width: 400px;
+}
+
+input {
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.waves-effect.waves-light.btn-small{
+    text-align: center;
+    margin-bottom: 4px;
 }
 
 #weather {
@@ -46,6 +48,4 @@ h1 {
     clear: both;
     width: auto;
 }
-
-
 
