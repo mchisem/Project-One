@@ -9,9 +9,23 @@ h1 {
 #search {
     float: left;
     padding: 10px;
-    margin-top: 40px;
     border: 2px solid black;
-    width: 500px;
+    width: 400px;
 }
 
+#weather {
+    border: 2px solid black;
+    float: right;
+}
+
+#map {
+    border: 2px solid black;
+    clear: both;
+}
+
+#activities  {
+    border: 2px solid black;
+    clear: both;
+    
+}
 
