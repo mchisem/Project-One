@@ -7,33 +7,39 @@
     <title>Weather or Not</title>
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bebas+Neue|Bree+Serif|Domine|Kalam|Kaushan+Script|Montserrat+Alternates|Zilla+Slab&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
 
 <link rel="stylesheet" href="./style.css">
 <body>
-
-<nav>
-    <div class="nav-wrapper">
-        <h1>Weather or Not</h1>
-    </div>
-  </nav>
-
-<div class="container" id="search">
-    <input type="text"><a class="waves-effect waves-light btn-small"><i class="material-icons right">cloud</i>button</a>
+<nav class="nav-extended">
+    <img id="cloud" src="cloud\cloud.png">
+    <h1>Weather Or Not</h1>
+    <p>Activities suggested based on your location and it's weather!</p> 
+</nav>
+  
+<div class="row container" id="search">
+    <h2>Search your City:</h2>
+    <input type="text-box" placeholder="Westwood, CA">
+    <a class="waves-effect waves-light btn-small">
+        <i class="material-icons right">cloud</i>submit
+    </a>
 </div>
 
 <div class="container" id="weather">
-
 </div>
 
 <div class="container" id="map">
-
 </div>
 
 <div class="container" id="activities">
+</div> 
 
-</div>
-
-    
+<div class="footer">
+    @Maya Chisem, Nick Jaquez, Jorge Morales, & Zachary Auerbach 2020
+</div class="footer">
 </body>
 </html>

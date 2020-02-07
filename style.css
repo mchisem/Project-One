@@ -1,4 +1,75 @@
-h1 {
-    text-align: center;
-    background-color: cadetblue !important;
+/*general styling*/
+* {
+    box-sizing: border-box;
 }
+
+body {
+    background-color: cornflowerblue;
+}
+
+h1 {
+    margin-top: -20px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+/*title*/
+.nav-extended {
+    background-color: cornflowerblue;
+    text-align: center;
+    padding: 10px;
+    box-shadow: none;
+    margin-top: 5px;
+}
+
+p {
+    margin-top: -20px;
+    font-size: 20px;
+}
+
+/*search container*/
+#search {
+    border: 5px solid white;
+    /*box-shadow: 2px 4px 14px 4px whitesmoke;*/
+    background-color: darkblue;
+    color: white;
+}
+
+input {
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.waves-effect.waves-light.btn-small{
+    text-align: center;
+    margin-bottom: 4px;
+    background-color: cornflowerblue;
+}
+
+.waves-effect.waves-light.btn-small:hover {
+    font-weight: bolder;
+}
+
+/*containers*/
+#search,
+#weather,
+#map,
+#activities {
+    padding: 25px;
+   
+    text-align: center;
+}
+
+/*footer*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
