@@ -1,4 +1,10 @@
+/*title*/
 h1 {
     text-align: center;
     background-color: cadetblue !important;
+}
+
+/*search container*/
+#search {
+    float: left;
 }
