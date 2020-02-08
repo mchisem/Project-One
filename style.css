@@ -24,7 +24,6 @@ h2 {
   
 /*title*/
 .nav-extended {
-    /*background-color: cornflowerblue;*/
     background-color: transparent;
     text-align: center;
     padding: 10px;
@@ -41,8 +40,6 @@ p {
 /*search container*/
 #search {
     border: 5px solid white;
-    /*box-shadow: 2px 4px 14px 4px whitesmoke;*/
-    /*background-color: darkblue;*/
     color: white;
     position: fixed;
     justify-content: center;
