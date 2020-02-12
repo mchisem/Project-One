@@ -28,7 +28,7 @@ h2 {
     text-align: center;
     padding: 10px;
     box-shadow: none;
-    margin-top: .5%;
+    margin-top: .8%;
     position: fixed;
 }
 
@@ -41,10 +41,10 @@ p {
 #search {
     border: 5px solid white;
     color: white;
-    position: fixed;
+    position: absolute;
     justify-content: center;
     margin-top: 300px;
-    margin-left: 14%;
+    margin-left: 14%; 
     margin-right: auto;
 }
 
