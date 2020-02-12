@@ -48,6 +48,13 @@ p {
     margin-right: auto;
 }
 
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #search {
+      margin-left: 5%;
+    }
+  }
+
 input {
     padding: 5px;
     border-radius: 2px;
@@ -81,3 +88,4 @@ input {
     text-align: center;
     padding: 10px;
   }
+
