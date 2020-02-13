@@ -5,43 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather or Not</title>
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bebas+Neue|Bree+Serif|Domine|Kalam|Kaushan+Script|Montserrat+Alternates|Zilla+Slab&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-<video autoplay muted loop id="myVideo">
-    <source src="https://ia601404.us.archive.org/31/items/cloud_202002/cloud.mp4" type="video/mp4">
-    </video>
-
+<!-- <video autoplay muted loop id="myVideo"> -->
+    <!-- <source src="https://ia601404.us.archive.org/31/items/cloud_202002/cloud.mp4" type="video/mp4"> -->
+        <!-- </video> -->
 <nav class="nav-extended">
     <h1>Weather Or Not</h1>
     <p>Activities suggested based on your location and it's weather!</p> 
 </nav>
-
 <div class="row container" id="search">
     <h2>Search your City:</h2>
-    <input type="text-box" placeholder="Westwood, CA">
-    <a class="waves-effect waves-light btn-small">
+    <input type="text-box" placeholder="Westwood, CA" id="value">
+        <a class="waves-effect waves-light btn-small">
         <i class="material-icons right">cloud</i>submit
     </a>
 </div>
-
 <div class="container" id="weather">
+    <div id="city"></div>
+    <div id="wind"></div>
+    <div id="humidity"></div>
+    <div id="temp"></div>
+    <img id="icon"></img>
 </div>
-
 <div class="container" id="map">
 </div>
-
 <div class="container" id="activities">
+    <img id="image0"></img>
+    <div id="region-name0"></div>
+    <div id="city-activity0"></div>
+    <div id="title0"></div>
+    <div id="start-time0"></div>
+    <div id="addy0"></div>
+    <div id="venue0"></div>
+    <div id="description0"></div>
+    <link id ="link0"></div>  
 </div> 
-
-<div class="footer">
-    @Maya Chisem, Nick Jaquez, Jorge Morales, & Zachary Auerbach 2020
-</div class="footer">
+<div class="container" id="activities1">
+    <img id="image1"></img>
+    <div id="region-name1"></div>
+    <div id="city-activity1"></div>
+    <div id="title1"></div>
+    <div id="start-time1"></div>
+    <div id="addy1"></div>
+    <div id="venue1"></div>
+    <div id="description1"></div>
+    <link id ="link1"></div>  
+</div> 
+<div class="container" id="activities2">
+    <img id="image2"></img>
+    <div id="region-name2"></div>
+    <div id="city-activity2"></div>
+    <div id="title2"></div>
+    <div id="start-time2"></div>
+    <div id="addy2"></div>
+    <div id="venue2"></div>
+    <div id="description2"></div>
+    <link id ="link2"></div>  
+</div> 
 </body>
+<script type="text/javascript" src="http://api.eventful.com/js/api"></script>
+<script src="main.js"></script>
 </html>
