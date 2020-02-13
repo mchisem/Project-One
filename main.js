@@ -53,7 +53,6 @@ function events(userInput) {
       console.log(oData.events.event[2].venue_url)
     });
   }
-  
       $(".btn-small").on("click", function() {
         var userInput = $("#value").val()
         // Here we are building the URL we need to query the database
