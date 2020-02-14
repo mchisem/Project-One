@@ -28,7 +28,7 @@ h2 {
     text-align: center;
     padding: 10px;
     box-shadow: none;
-    margin-top: .5%;
+    margin-top: .8%;
     position: fixed;
 } */
 
@@ -41,14 +41,21 @@ h2 {
 /* #search {
     border: 5px solid white;
     color: white;
-    position: fixed;
+    position: absolute;
     justify-content: center;
     margin-top: 300px;
-    margin-left: 14%;
+    margin-left: 14%; 
     margin-right: auto;
 } */
 
-/* input {
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #search {
+      margin-left: 5%;
+    }
+  }
+
+input {
     padding: 5px;
     border-radius: 2px;
 }
@@ -155,3 +162,4 @@ input {
     text-align: center;
     padding: 10px;
   }
+
