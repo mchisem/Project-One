@@ -1,4 +1,5 @@
 var APIKey = "7c5ff53a72bccf11a9b6c285cf436a47";
+
 function events(userInput) {
     var oArgs = {
       app_key: "nnvHmLFmL3fNTWwG",
@@ -9,22 +10,55 @@ function events(userInput) {
       sort_order: "popularity",
       total_items: 5,
     };
+=======
+
+function events(userInput) {
+
+    var oArgs = {
+      app_key: "nnvHmLFmL3fNTWwG",
+
+      q: "sports",
+
+      where: userInput,
+
+      date: "2020021000-2020022000",
+
+      page_size: 5,
+
+      sort_order: "popularity",
+
+      total_items: 5,
+    };
+
     EVDB.API.call("/events/search", oArgs, function(oData) {
       console.log(oData);
       // Note: this relies on the custom toString() methods below
       var image = $("#image0")
       image.attr({"src": oData.events.event[0].image.medium.url,"height": "200px", "width": "200px"});
+
       var imgDiv = $("#activities")
+
+      var imgDiv = $("#activities0")
+
       imgDiv.append(image)
       $("#city-activity0").text("City: " + oData.events.event[0].city_name);
       $("#region-name0").text("State: " + oData.events.event[0].region_name);
       $("#start-time0").text("Start-Time: " + oData.events.event[0].start_time);
+      
       $("#description0").text("Description: " + oData.events.event[0].description.replace("<p>",  " ").replace("<p>",  " ").replace("<p>",  " ").replace("<p>",  " ").replace("<p>",  " ").replace("</p>",  " ").replace("</p>",  " ").replace("</p>",  " ").replace("</p>",  " ").replace("</p>",  " "));
+
+      // $("#description0").text("Description: " + oData.events.event[0].description);
+
       $("#addy0").text("Address: " + oData.events.event[0].venue_address);
       $("#venue0").text("Venue: " + oData.events.event[0].venue_name);
       $("#title0").text("Title: " + oData.events.event[0].title);
       $("#link0").attr("href", oData.events.event[0].venue_url);
+
       //console.log(oData.events.event[0].venue_url)
+
+      console.log(oData.events.event[0].venue_url)
+
+
       var image = $("#image1")
       image.attr({"src": oData.events.event[1].image.medium.url,"height": "200px", "width": "200px"});
       var imgDiv = $("#activities1")
@@ -32,12 +66,21 @@ function events(userInput) {
       $("#city-activity1").text("City: " + oData.events.event[1].city_name);
       $("#region-name1").text("State: " + oData.events.event[1].region_name);
       $("#start-time1").text("Start-Time: " + oData.events.event[1].start_time);
+
       $("#description1").text("Description: " + oData.events.event[1].description);
+
+      // $("#description1").text("Description: " + oData.events.event[1].description);
+
       $("#addy1").text("Address: " + oData.events.event[1].venue_address);
       $("#venue1").text("Venue: " + oData.events.event[1].venue_name);
       $("#title1").text("Title: " + oData.events.event[1].title);
       $("#link1").attr("href", oData.events.event[1].venue_url);
+
       //console.log(oData.events.event[1].venue_url)
+
+      console.log(oData.events.event[1].venue_url)
+
+
       var image = $("#image2")
       image.attr({"src": oData.events.event[2].image.medium.url,"height": "200px", "width": "200px"});
       var imgDiv = $("#activities2")
@@ -45,14 +88,26 @@ function events(userInput) {
       $("#city-activity2").text("City: " + oData.events.event[2].city_name);
       $("#region-name2").text("State: " + oData.events.event[2].region_name);
       $("#start-time2").text("Start-Time: " + oData.events.event[2].start_time);
+
       $("#description2").text("Description: " + oData.events.event[2].description);
+
+      // $("#description2").text("Description: " + oData.events.event[2].description);
+
       $("#addy2").text("Address: " + oData.events.event[2].venue_address);
       $("#venue2").text("Venue: " + oData.events.event[2].venue_name);
       $("#title2").text("Title: " + oData.events.event[2].title);
       $("#link2").attr("href", oData.events.event[2].venue_url);
       console.log(oData.events.event[2].venue_url)
+
     });
   }
+
+
+
+    });
+  }
+  
+
       $(".btn-small").on("click", function() {
         var userInput = $("#value").val()
         // Here we are building the URL we need to query the database
@@ -63,9 +118,17 @@ function events(userInput) {
           APIKey;
         // We then created an AJAX call
         getCalls(queryURL);
+
         events(userInput);
         eventsCat(userInput);
       });
+
+        // events(userInput);
+        eventsCat(userInput);
+      });
+
+
+
 function getCalls(url) {
   $.ajax({
     url: url,
@@ -81,6 +144,7 @@ function getCalls(url) {
     $("#icon").attr({"src": "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png",
      "height": "150px", "width":"150px"});
    });
+
 };
 function eventsCat(userInput) {
   var oArgs = {
@@ -96,3 +160,31 @@ function eventsCat(userInput) {
     console.log(oData)
   })
 }
+
+
+};
+
+// function eventsCat(userInput) {
+
+//   var oArgs = {
+//     app_key: "nnvHmLFmL3fNTWwG",
+
+//     q: "sports",
+
+//     where: userInput,
+
+//     date: "2020021000-2020022000",
+
+//     page_size: 5,
+
+//     sort_order: "popularity",
+
+//     total_items: 5,
+//   };
+
+//   EVDB.API.call("/categories/list?", oArgs, function(oData) {
+//     console.log(oData)
+//   })
+// }
+
+
