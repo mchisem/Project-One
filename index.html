@@ -8,9 +8,12 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bebas+Neue|Bree+Serif|Domine|Kalam|Kaushan+Script|Montserrat+Alternates|Zilla+Slab&display=swap" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="./style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -25,14 +28,21 @@
 
 <div class="row container" id="search">
     <h2>Search your City:</h2>
-    <input type="text-box" placeholder="Westwood, CA">
+    <input id="value" type="text-box" placeholder="Westwood, CA">
     <a class="waves-effect waves-light btn-small">
         <i class="material-icons right">cloud</i>submit
     </a>
 </div>
 
 <div class="container" id="weather">
+  <h3 class="city-name"></h3>
+  <h4 class="date"></h4>
+  <p class="icon"></p>
+  <p class="temp"></p>
+  <p class="humid"></p>
+  <p class="wind"></p>
 </div>
+
 
 <div class="container" id="map">
 </div>
@@ -43,5 +53,125 @@
 <div class="footer">
     @Maya Chisem, Nick Jaquez, Jorge Morales, & Zachary Auerbach 2020
 </div class="footer">
+
+
+<script type="text/javascript">
+
+// Key Variable
+var APIKey = "94fb4992412a398a9fb2333272321439";
+
+
+//on click function/ local storage of city value
+$(".btn-small").on('click', function(event){
+    event.preventDefault();
+    console.log("good job!");
+    var city = $("#value").val().trim();
+    // localStorage.setItem('city', city);
+
+    weatherDaily(city);
+  
+})  
+
+// Daily Weather function with the URL we need to query the database
+function weatherDaily(city){
+
+        // remove previous weather data
+        $(".city-name").empty();
+        $(".date").empty();
+        $(".icon").empty();
+        $(".temp").empty();
+        $(".humid").empty();
+        $(".wind").empty();
+        
+        var weatherPosition = $("#weather");
+        $("#weather").append(weatherPosition).css({"color":"white", "position":"absolute", "margin-top":"450px", "margin-left":"13.5%"}); 
+
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=94fb4992412a398a9fb2333272321439"
+
+    // AJAX call to the OpenWeatherMap for Daily Weather
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function(response) {
+        //variables for daily weather response array//
+        var nameCity = response.name;
+        //console.log(nameCity);
+        var date = response.dt;
+        //console.log(date);
+        var dayDate = moment.unix(date).format("LL");
+        //console.log(dayDate);
+            var iconUrl = "https://openweathermap.org/img/wn/";
+            var iconCity = response.weather[0].icon; 
+            var iconPng = "@2x.png";
+            var icon = iconUrl + iconCity + iconPng;
+            var iconImg = $("<img>");
+            iconImg.attr("src", icon);
+            // console.log(iconImg);
+        var tempCity = response.main.temp;
+        //change the temp from celsius to farenheight 
+            var fDegree = ((tempCity - 273.15) * 1.8 + 32).toFixed(0);
+        // console.log(tempCity);
+        var humidCity = response.main.humidity;
+        // console.log(humidCity);
+        var windCity = response.wind.speed;
+        // console.log(windCity);
+        
+        $(".city-name").append(nameCity);
+        $(".date").append(dayDate); 
+        $(".icon").append(iconImg);
+        $(".temp").append("Temperature: " + fDegree + "°F");
+        $(".humid").append("Humidity: " + humidCity + "%");
+        $(".wind").append("Wind Speed: " + windCity + "MPH").css({"margin-bottom":"30px"});
+    
+      })
+
+      }
+// function events(userInput) {
+//     var oArgs = {
+//       app_key: "nnvHmLFmL3fNTWwG",
+//       q: "events",
+//       where: userInput,
+//       date: "2020021000-2020022000",
+//       page_size: 5,
+//       sort_order: "popularity",
+//       total_items: 5
+//     };
+//     // EVDB.API.call("/events/search", oArgs, function(oData) {
+//     //   console.log(oData);
+//     //   // Note: this relies on the custom toString() methods below
+//     // });
+//   }
+//       $(".btn-small").on("click", function() {
+//         var userInput = $("#value").val()
+//         console.log(userInput)
+//         //Here we are building the URL we need to query the database
+//         var queryURL =
+//           "https://api.openweathermap.org/data/2.5/weather?q=" +
+//           userInput +
+//           "&appid=" +
+//           APIKey;
+//         // We then created an AJAX call
+//         getCalls(queryURL);
+//         events(userInput);
+//       });
+
+// function getCalls(url) {
+//   $.ajax({
+//     url: url,
+//     method: "GET"
+//   }).then(function(response) {
+//     // Create CODE HERE to log the resulting object
+//     console.log(response);
+//     let temp = Math.round(((response.main.temp - 273.15) * 9) / 5 + 32);
+//     $("#city").text("City: " + response.name).css({"position":"fixed"});
+//     $("#temp").text("Temperature: " + temp + String.fromCharCode(176)+"F");
+//     $("#humidity").text("Humidity: " + response.main.humidity);
+//     $("#wind").text("Wind Speed: " + response.wind.speed);
+//     $("#icon").attr({"src": "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png",
+//      "height": "150px", "width":"150px"});
+//    });
+// };
+
+</script>
 </body>
 </html>
