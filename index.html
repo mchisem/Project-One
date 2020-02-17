@@ -33,8 +33,6 @@
     <div id="temp"></div>
     <img id="icon"></img>
 </div>
-<div class="container" id="map">
-</div>
 <div class="container" id="activities">
     <img id="image0"></img>
     <div id="region-name0"></div>
@@ -66,9 +64,17 @@
     <div id="addy2"></div>
     <div id="venue2"></div>
     <div id="description2"></div>
-    <link id ="link2"></div>  
+    <link id ="link2"></div>
+
+    <div class="container" id="map-container">
+        <div id="map_canvas" style="width:700px; height:500px; margin-left:80px;"></div>
+        <div id="map_canvas1" style="width:700px; height:500px; margin-left:80px;"></div>
+        <div id="map_canvas2" style="width:700px; height:500px; margin-left:80px;"></div>
+          
+    </div>
 </div> 
 </body>
+<script src="https://maps.googleapis.com/maps/api/js?key=YourKey!!"></script>
 <script type="text/javascript" src="http://api.eventful.com/js/api"></script>
 <script src="main.js"></script>
 </html>
