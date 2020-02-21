@@ -69,12 +69,27 @@ input {
 
 /*containers*/
 #search,
-#weather,
+#weather{
+    text-align: center;
+    padding: 25px;
+}
+
+#activities{
+    margin-top: 870px;
+}
+
+#activities1{
+    margin-top: 1400px;
+}
+
+#activities2 {
+    margin-top: 1930px;
+}
+
 #activities,
 #activities1,
 #activities2 {
     padding: 25px;
-    text-align: center;
 }
 
 #weather,
@@ -85,10 +100,18 @@ input {
     color: white;
 }
 
+#title0{
+    padding-right: 5px;
+}
+
+#activities2 {
+    margin-bottom: 40px;
+}
+
 #act-info{
-    /* clear: both; */
     margin-top: 25px;
     opacity: none;
+    margin-left: 5px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -101,6 +124,16 @@ input {
       margin-left: 4.5%;
     }
   }
+
+#map_canvas,
+#map_canvas1,
+#map_canvas2 {
+    float: right;
+    margin-top: -90px;
+    width: 600px; 
+    height: 300px;
+    padding: 10px;
+}
 
 /*footer*/
 .footer {
