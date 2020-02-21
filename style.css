@@ -77,6 +77,14 @@ input {
     text-align: center;
 }
 
+#weather,
+#activities,
+#activities1,
+#activities2 {
+    margin-left: 14%;
+    color: white;
+}
+
 #act-info{
     /* clear: both; */
     margin-top: 25px;
@@ -87,7 +95,9 @@ input {
     /* For mobile phones: */
     #search,
     #weather,
-    #activities {
+    #activities,
+    #activities1,
+    #activities2 {
       margin-left: 4.5%;
     }
   }
