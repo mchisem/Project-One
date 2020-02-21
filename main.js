@@ -156,8 +156,66 @@ function eventsMid(city) {
     $("#title2").text(oData.events.event[2].title);
     $("#link2").attr("href", oData.events.event[2].venue_url);
     console.log(oData.events.event[2].venue_url)
+
+    // Google API Maps
+    var eventLat0 = parseFloat(oData.events.event[0].latitude);
+    var eventLong0 = parseFloat(oData.events.event[0].longitude);
+    
+    var eventOne0 = {lat: eventLat0, lng: eventLong0};
+
+    var map = new google.maps.Map(document.getElementById('map_canvas'), {
+    zoom: 8,
+    center: eventOne0
   });
+
+  var marker = new google.maps.Marker({
+    position: eventOne0,
+    map: map, marker,
+    title: (oData.events.event[0].venue_name + oData.events.event[0].venue_address),
+  });
+
+
+
+//   lat/long map two
+  var eventLat1 = parseFloat(oData.events.event[1].latitude);
+  var eventLong1 = parseFloat(oData.events.event[1].longitude);
+  
+  var eventOne1 = {lat: eventLat1, lng: eventLong1};
+
+  var map = new google.maps.Map(document.getElementById('map_canvas1'), {
+    zoom: 8,
+    center: eventOne1
+  });
+
+
+  var marker = new google.maps.Marker({
+  position: eventOne1,
+  map: map, marker,
+  title: (oData.events.event[1].venue_name + ", " + oData.events.event[1].venue_address),
+  });
+
+  // map three
+  var eventLat2 = parseFloat(oData.events.event[2].latitude);
+  var eventLong2 = parseFloat(oData.events.event[2].longitude);
+
+  var eventOne2 = {lat: eventLat2, lng: eventLong2};
+
+  var map = new google.maps.Map(document.getElementById('map_canvas2'), {
+  zoom: 8,
+  center: eventOne2
+});
+
+
+var marker = new google.maps.Marker({
+position: eventOne2,
+map: map, marker,
+title: (oData.events.event[2].venue_name + ", " + oData.events.event[2].venue_address),
+});
+
+
+});
 }
+
 
 //hot events//
 function eventsHot(city) {
@@ -288,23 +346,23 @@ function eventsCold(city) {
   });
 }
 
-// var nav = (navigator.geolocation)
-//     navigator.geolocation.getCurrentPosition(function(position) {
-//       var pos = {
-//         lat: position.coords.latitude,
-//         lng: position.coords.longitude
-//       }
-//       var test =
-//       {
-//         origin: pos,
-//         destination: 'Los Angeles, CA',
-//         provideRouteAlternatives: false,
-//         travelMode: 'DRIVING',
-//         drivingOptions: {
-//           departureTime: new Date(/* now, or future date */),
-//           trafficModel: 'pessimistic'
-//         },
-//         unitSystem: google.maps.UnitSystem.IMPERIAL
-//       }
-//       console.log(test)
-//     });
+var nav = (navigator.geolocation)
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      }
+      var test =
+      {
+        origin: pos,
+        destination: 'Los Angeles, CA',
+        provideRouteAlternatives: false,
+        travelMode: 'DRIVING',
+        drivingOptions: {
+          departureTime: new Date(/* now, or future date */),
+          trafficModel: 'pessimistic'
+        },
+        unitSystem: google.maps.UnitSystem.IMPERIAL
+      }
+      console.log(test)
+    });
