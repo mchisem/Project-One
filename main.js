@@ -115,7 +115,7 @@ function eventsMid(city) {
 
     //mid events 1//
     var activities = $("#activities")
-    $("#activities").append(activities).css({"background-color":"white","opacity":"0.7","color":"black", "position":"absolute"});
+    $("#activities").append(activities).css({"background-color":"white","opacity":"0.7","color":"black"});
 
     var image = $("#image0")
     image.attr({"src": oData.events.event[0].image.medium.url,"height": "200px", "width": "200px"});
@@ -136,7 +136,7 @@ function eventsMid(city) {
     var actOne = $("#activities1")
     actOne.append(image)
 
-    $("#activities1").append(actOne).css({"background-color":"white", "opacity":"0.7","color":"black", "position":"absolute"});
+    $("#activities1").append(actOne).css({"background-color":"white", "opacity":"0.7","color":"black"});
 
     //images//
     var image = $("#image2")
@@ -153,7 +153,7 @@ function eventsMid(city) {
     console.log(oData.events.event[1].venue_url)
 
     //mid event background 3//
-    $("#activities2").append(actTwo).css({"background-color":"white", "opacity":"0.7","color":"black", "position":"absolute"});
+    $("#activities2").append(actTwo).css({"background-color":"white", "opacity":"0.7","color":"black"});
 
     $("#city-activity2").text(oData.events.event[2].city_name + " , " + oData.events.event[2].region_name);
     $("#start-time2").text("Start-Time: " + oData.events.event[2].start_time);
@@ -248,7 +248,7 @@ function eventsHot(city) {
       imgDiv.append(image)
 
       //hot event info //
-      $("#activities").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black", "position":"absolute"});
+      $("#activities").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black"});
 
       $("#city-activity0").text(events.event[0].city_name  + " , " + oData.events.event[0].region_name);
       $("#start-time0").text("Start-Time: " + oData.events.event[0].start_time);
@@ -264,7 +264,7 @@ function eventsHot(city) {
       imgDiv.append(image)
 
       // //background//
-      $("#activities1").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black", "position":"absolute"});
+      $("#activities1").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black"});
 
       $("#city-activity1").text(events.event[1].city_name   + " , " + oData.events.event[1].region_name);
       $("#start-time1").text("Start-Time: " + oData.events.event[1].start_time);
@@ -280,7 +280,7 @@ function eventsHot(city) {
       imgDiv.append(image)
 
       // //background//
-      $("#activities2").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black", "position":"absolute"});
+      $("#activities2").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black"});
 
       $("#city-activity2").text(events.event[2].city_name   + " , " + oData.events.event[2].region_name);
       $("#start-time2").text("Start-Time: " + oData.events.event[2].start_time);
@@ -369,7 +369,7 @@ function eventsCold(city) {
       var imgDiv = $("#activities")
       imgDiv.append(image)
 
-      $("#activities").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black", "position":"absolute", "margin-top":"870px"});
+      $("#activities").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black"});
 
       $("#city-activity0").text(oData.events.event[0].city_name + " , " + oData.events.event[0].region_name);
       $("#start-time0").text("Start-Time: " + oData.events.event[0].start_time);
@@ -385,7 +385,7 @@ function eventsCold(city) {
       var imgDiv = $("#activities1")
       imgDiv.append(image)
 
-      $("#activities1").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black", "position":"absolute"});
+      $("#activities1").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black"});
 
       $("#city-activity1").text(oData.events.event[1].city_name + " , " + oData.events.event[1].region_name);
       $("#start-time1").text("Start-Time: " + oData.events.event[1].start_time);
@@ -401,7 +401,7 @@ function eventsCold(city) {
       var imgDiv = $("#activities2")
       imgDiv.append(image)
 
-      $("#activities2").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black", "position":"absolute", "margin-bottom":"60px"});
+      $("#activities2").append(imgDiv).css({"background-color":"white", "opacity":"0.7","color":"black"});
 
       $("#city-activity2").text(oData.events.event[2].city_name + " , " + oData.events.event[2].region_name);
       $("#start-time2").text("Start-Time: " + oData.events.event[2].start_time);

@@ -90,6 +90,7 @@ input {
 #activities1,
 #activities2 {
     padding: 25px;
+    position: absolute;
 }
 
 #weather,
@@ -120,10 +121,7 @@ input {
     #weather,
     #activities,
     #activities1,
-    #activities2,
-    #map_canvas,
-    #map_canvas1,
-    #map_canvas2 {
+    #activities2 {
       margin-left: 4.5%;
     }
   }
@@ -132,11 +130,8 @@ input {
     /* For mobile phones: */
     #activities,
     #activities1,
-    #activities2,
-    #map_canvas,
-    #map_canvas1,
-    #map_canvas2 {
-      margin-bottom: 10%;
+    #activities2 {
+      margin-bottom: 9%;
     }
   }
 
@@ -149,7 +144,6 @@ input {
     height: 300px;
     padding: 10px;
 }
-
 
 /* loader */
 #loader-wrapper {
@@ -199,4 +193,3 @@ input {
     text-align: center;
     padding: 10px;
   }
-
