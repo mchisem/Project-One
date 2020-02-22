@@ -6,6 +6,7 @@ $(".btn-small").on('click', function(event){
     event.preventDefault();
     console.log("good job!");
     var city = $("#value").val().trim();
+    $("#loader-wrapper").removeClass("hide");
  
     weatherDaily(city);
 })  
@@ -69,17 +70,20 @@ function weatherDaily(city) {
           $("#myVideo").addClass('hide');
           $("#video-hot").removeClass('hide');
           $("#video-cold").addClass('hide');
+          $("#loader-wrapper").addClass('hide');
         } else if (fDegree < 80 && fDegree > 60) {
             eventsMid(city);
             $("#video-hot").addClass('hide');
             $("#video-cold").addClass('hide');
             $("#myVideo").removeClass('hide');
+            $("#loader-wrapper").addClass('hide');
         } else if (fDegree <= 59) {
             eventsCold(city);
             console.log("it's cold!");
             $("#myVideo").addClass("hide");
             $("#video-cold").removeClass('hide');
             $("#video-hot").addClass('hide');
+            $("#loader-wrapper").addClass('hide');
         }
       })
       }
