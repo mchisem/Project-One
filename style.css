@@ -131,7 +131,7 @@ input {
     #activities,
     #activities1,
     #activities2 {
-      margin-bottom: 9%;
+      margin-bottom: 25%;
     }
   }
 
@@ -144,6 +144,15 @@ input {
     height: 300px;
     padding: 10px;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #map_canvas,
+    #map_canvas1,
+    #map_canvas2 {
+      width: 10%;
+    }
+  }
 
 /* loader */
 #loader-wrapper {
