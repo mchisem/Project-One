@@ -127,7 +127,6 @@ function eventsMid(city) {
     $("#start-time0").text("Start-Time: " + oData.events.event[0].start_time);
     $("#addy0").text("Address: " + oData.events.event[0].venue_address);
     $("#venue0").text("Venue: " + oData.events.event[0].venue_name);
-    //$("#description0").text("Description: " + oData.events.event[0].description);
     $("#link0").attr("href", oData.events.event[0].venue_url);
     console.log(oData.events.event[0].venue_url)
 
@@ -150,8 +149,7 @@ function eventsMid(city) {
     $("#start-time1").text("Start-Time: " + oData.events.event[1].start_time);
     $("#addy1").text("Address: " + oData.events.event[1].venue_address);
     $("#venue1").text("Venue: " + oData.events.event[1].venue_name);
-    $("#description2").text("Description: " + oData.events.event[2].description);
-        $("#link1").attr("href", oData.events.event[1].venue_url);
+    $("#link1").attr("href", oData.events.event[1].venue_url);
     console.log(oData.events.event[1].venue_url)
 
     //mid event background 3//
